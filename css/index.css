@@ -1,0 +1,301 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+p,
+div,
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: Quicksand, sans-serif;
+}
+p {
+  line-height: 1.25;
+}
+h1 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+h6 {
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+.top-header {
+  z-index: 100;
+}
+.hide-top-header {
+  display: none;
+}
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.top-banner .img-ctn {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+.top-banner .img-ctn img {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+.top-banner .right-banner {
+  width: 550px;
+  text-align: end;
+}
+.top-banner .right-banner .serving-areas {
+  font-style: italic;
+  color: #555555;
+  margin-bottom: 10px;
+}
+.top-banner .right-banner .contact {
+  display: flex;
+}
+.top-banner .right-banner .contact p {
+  width: 55%;
+  color: #E63900;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.top-banner .right-banner .contact div {
+  width: 45%;
+  color: #E63900;
+  font-weight: 800;
+}
+.top-banner .right-banner .contact div h3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.top-banner .right-banner .contact div button {
+  padding: 3px 20px;
+  line-height: 1.7;
+  background-color: #E63900;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+}
+.top-banner .right-banner .contact div button:hover {
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  background-color: #03754F;
+  color: #FFFFFF;
+  line-height: 3;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+.sticky-header {
+  position: fixed;
+  background-color: #FFFFFF;
+}
+.invisible {
+  margin-top: -50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+.visible {
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: margin-top 1s ease;
+  z-index: 1000;
+}
+.sticky-header .top-banner {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.sticky-header .top-banner .img-ctn {
+  width: 225px;
+}
+.sticky-header .top-banner .right-banner .serving-areas {
+  display: none;
+}
+.sticky-header .top-banner .right-banner .contact {
+  height: 100%;
+}
+.sticky-header .top-banner .right-banner .contact p {
+  display: none;
+}
+.sticky-header .top-banner .right-banner .contact div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sticky-header .top-banner .right-banner .contact div h3 {
+  font-size: 2.25rem;
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+.sticky-header .top-banner .right-banner .contact div button {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 3px 15px;
+}
+.sticky-header nav {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+.delete {
+  margin-top: 300px;
+  height: 3000px;
+}

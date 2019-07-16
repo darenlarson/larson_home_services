@@ -1,0 +1,162 @@
+.top-header {
+  z-index: 100;
+}
+
+.hide-top-header {
+  display: none;
+}
+
+// ***** TOP BANNER *****
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  .img-ctn {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .right-banner {
+    width: 550px;
+    text-align: end;
+
+    .serving-areas {
+      font-style: italic;
+      color: @grey;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      display: flex;
+
+      p {
+        width: 55%;
+        color: @orange;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+
+      div {
+        width: 45%;
+        color: @orange;
+        font-weight: 800;
+        h3 {
+          font-size: 3rem;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 3px 20px;
+          line-height: 1.7;
+          background-color: @orange;
+          color: @white;
+          font-size: 1.8rem;
+          font-weight: 700;
+          border: none;
+          border-radius: 20px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ***** NAV BAR *****
+nav {
+  width: 100%;
+  background-color: @green;
+  color: @white;
+  line-height: 3;
+  box-shadow: 0 5px 10px rgba(0,0,0,.35);
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+
+// ***** STICKY HEADER *****
+.sticky-header {
+  position: fixed;
+  background-color: @white;
+}
+  .invisible {
+    margin-top: -50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+  }
+
+  .visible {
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: margin-top 1s ease;
+    z-index: 1000;
+  }
+
+.sticky-header {
+  .top-banner {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-top: 10px;
+    margin-bottom: 10px;
+
+    .img-ctn {
+      width: 225px;
+    }
+
+    .right-banner {
+      .serving-areas {
+        display: none;
+      }
+
+      .contact {
+        height: 100%;
+        p {
+          display: none;
+        }
+
+        div {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          h3 {
+            font-size: 2.25rem;
+            margin-right: 40px;
+            margin-bottom: 0;
+          }
+          button {
+            font-size: 1.5rem;
+            font-weight: normal;
+            padding: 3px 15px;
+          }
+        }
+      }
+    }
+  }
+  nav {
+    box-shadow: 0 5px 10px rgba(0,0,0,.35);
+  }
+}
+
+.delete {
+  margin-top: 300px;
+  height: 3000px;
+}
