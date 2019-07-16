@@ -1,29 +1,4 @@
-// // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {
-//   myFunction()
-// };
-
-// // Get the DOM elements
-// const header = document.querySelector("header");
-// const nav = document.querySelector("nav");
-// const topBanner = document.querySelector(".top-banner");
-
-// // Get the offset position of the navbar
-// const sticky = nav.offsetTop;
-
-// // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   console.log(sticky);
-//   if (window.pageYOffset >= sticky) {
-//     header.classList.add("sticky-header");
-//     topBanner.classList.add("shrink");
-//     topBanner.classList.remove("shrink");
-//   } else if (window.pageYOffset < sticky - 100) {
-//     header.classList.remove("sticky-header");
-//   }
-// }
-
-// When the user scrolls the page, execute myFunction
+// ***** STICKY HEADER *****
 window.onscroll = function() {
   myFunction();
 };
@@ -39,12 +14,10 @@ const breakPoint = navTop.offsetTop;
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   let y = window.scrollY;
-  console.log(y);
 
   if (window.pageYOffset >= breakPoint) {
     stickyHeader.classList.add("visible");
     stickyHeader.classList.remove("invisible");
-    // topHeader.classList.add("hide-top-header");
   }
 
   if (y < 90) {
@@ -53,3 +26,50 @@ function myFunction() {
     topHeader.classList.remove("hide-top-header");
   }
 }
+
+
+// ***** NAV DROP DOWN MENU *****
+class TabLink {
+  constructor(link) {
+    this.link = link;
+    // Get the custom data attribute on the Link
+    this.linkData = this.link.dataset.tab;
+    // Using the custom data attribute get the associated Item element
+    this.tabItem = document.querySelector(`.dropdown-content[data-tab='${this.linkData}']`);
+    // Using the Item element, create a new instance of the TabItem class
+    this.tabItem = new TabItem(this.tabItem);
+
+    // Add event listeners on this instance
+    this.link.addEventListener('mouseenter', () => { this.show() });
+    this.link.addEventListener('mouseleave', () => { this.hide() });
+
+  };
+
+  show() {
+    this.tabItem.show();
+  }
+
+  hide() {
+    this.tabItem.hide();
+  }
+}
+
+
+class TabItem {
+	constructor(tabElement) {
+		this.tabElement = tabElement;
+  }
+
+  show() {
+    this.tabElement.classList.add('dropdown-visible');
+  }
+
+  hide() {
+    this.tabElement.classList.remove('dropdown-visible');
+  }
+}
+
+// Get the DOM elements
+let links = Array.from(document.querySelectorAll('.nav-link'));
+links = links.map( link => new TabLink(link));
+
