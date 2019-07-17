@@ -1,91 +1,77 @@
-// .slider-ctn {
-//   height: 365px;
-//   width: 100%;
-//   overflow-x: hidden;
-// }
-
-// .slider {
-//   display: flex;
-//   flex-wrap: nowrap;
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .slide1 {
-//   background: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1347/mm-gutter2-LEAFGUARD-DEALER-IMG.jpg);
-// }
-
-// .slide2 {
-//   background: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1423/lg-mm-roof.jpg);
-// }
-
-// .slide {
-//   border: 1px solid red;
-//   // height: 365px;
-//   height: 100%;
-//   // width: 100%;
-//   width: 100vw;
-//   background-position: center center;
-//   background-size: cover;
-//   // display: flex;
-// }
-
-// .slide-content {
-//   display: flex;
-// }
-
-
-
-// =========== EXAMPLE ==========
+// =========== CAROUSEL ==========
 .carousel {
+
   position: relative;
-  height: 600px;
-  width: 80%;
-  margin: 0 auto;
+  height: 365px;
+  width: 100%;
 }
 
 .carousel-image {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  width: 100%;
+  // object-fit: cover;
 }
 
 .carousel-track-container {
   height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .carousel-track {
-  padding: 0;
-  margin: 0;
   list-style: none;
   position: relative;
   height: 100%;
-  transition: transform 250ms ease-in;
+  width: 100%;
+  transition: transform 1500ms ease-in-out;
 }
 
+
+// ***** CAROUSEL SLIDES
 .carousel-slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
 }
 
+#slide1 {
+  background: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1347/mm-gutter2-LEAFGUARD-DEALER-IMG.jpg);
+  background-position: center center;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+}
+
+#slide2 {
+  background: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1423/lg-mm-roof.jpg);
+  background-position: center center;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+}
+
+
+// ***** CAROUSEL BUTTONS *****
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
 }
 
 .left-button {
-  left: -40px;
+  left: 0;
 }
 
 .right-button {
-  right: -40px;
+  right: 0;
 }
 
+
+// ***** CAROUSEL INDICATOR BUTTONS *****
 .carousel-nav {
   display: flex;
   justify-content: center;
@@ -97,11 +83,11 @@
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, 0.3);
   margin: 0 12px;
   cursor: pointer;
 }
 
-.current-slide {
-    background: rgba(0,0,0,.75);
+.current-slide-indicator {
+    background: rgba(0, 0, 0, 0.75);
   }
