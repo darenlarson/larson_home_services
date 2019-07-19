@@ -1,0 +1,100 @@
+// ***** COMPANY SUMMERY *****
+.company-summary {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 70%;
+}
+
+.company-summary-ctn {
+  h1 {
+    font-size: 4.4rem;
+    line-height: 62px;
+    text-align: center;
+    color: @green;
+  }
+  h2 {
+    font-size: 2.8rem;
+    line-height: 36px;
+    text-align: center;
+    color: @black;
+    font-weight: 700;
+  }
+  p {
+    margin: 35px 7% 35px 7%;
+    line-height: 1.5;
+  }
+}
+
+// ***** WHY GREATER MADISON HOMEOWNERS CHOOSE US *****
+.why-us {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 80%;
+}
+
+.why-us-ctn {
+  width: 100%;
+  h2 {
+    color: @green;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.why-us-boxes {
+  // border: 1px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.why-us-box {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 0 5px lightgrey;
+  width: 235px;
+  padding: 10px;
+  .icon {
+    // border: 1px solid green;
+    text-align: center;
+    margin: 15px;
+    .fa {
+      transform: scaleX(-1);
+      font-size: 3.8rem;
+      color: @dark-green;
+    }
+  }
+  p {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+  }
+}
+
+.services-buttons {
+  // border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services-button {
+  width: 300px;
+  background-color: @green;
+  color: @white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color .5s ease;
+  &:hover {
+    // background-color: @light-green;
+    color: @orange;
+  }
+}

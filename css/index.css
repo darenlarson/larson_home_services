@@ -133,7 +133,7 @@ div,
 body {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: Quicksand, sans-serif;
+  font-family: proxima-nova, sans-serif;
 }
 p {
   line-height: 1.25;
@@ -161,6 +161,9 @@ h5 {
 h6 {
   font-size: 17px;
   font-size: 1.7rem;
+}
+button:focus {
+  outline: none;
 }
 .top-header {
   z-index: 100;
@@ -402,9 +405,31 @@ nav {
   bottom: 0;
   width: 100%;
   height: 100%;
+  color: #FFFFFF;
+}
+.carousel-slide .slide-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.59);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px 0 50px;
+}
+.carousel-slide .slide-content h3 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+}
+.carousel-slide .slide-content h4 {
+  color: #FBEC74;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-top: 30px;
 }
 #slide1 {
-  background: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1347/mm-gutter2-LEAFGUARD-DEALER-IMG.jpg);
+  background-image: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1347/mm-gutter2-LEAFGUARD-DEALER-IMG.jpg);
   background-position: center center;
   width: 100%;
   background-size: cover;
@@ -422,12 +447,23 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-right: 2px solid #9E9D98;
+  border-bottom: 2px solid #9E9D98;
+  background: none;
+  cursor: pointer;
 }
 .left-button {
   left: 0;
+  transform: translateY(-50%) rotate(135deg);
+  margin-left: 25px;
 }
 .right-button {
   right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+  margin-right: 25px;
 }
 .carousel-nav {
   display: flex;
@@ -445,4 +481,89 @@ nav {
 }
 .current-slide-indicator {
   background: rgba(0, 0, 0, 0.75);
+}
+.company-summary {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 70%;
+}
+.company-summary-ctn h1 {
+  font-size: 4.4rem;
+  line-height: 62px;
+  text-align: center;
+  color: #03754F;
+}
+.company-summary-ctn h2 {
+  font-size: 2.8rem;
+  line-height: 36px;
+  text-align: center;
+  color: #353535;
+  font-weight: 700;
+}
+.company-summary-ctn p {
+  margin: 35px 7% 35px 7%;
+  line-height: 1.5;
+}
+.why-us {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 80%;
+}
+.why-us-ctn {
+  width: 100%;
+}
+.why-us-ctn h2 {
+  color: #03754F;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.why-us-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.why-us-box {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 0 5px lightgrey;
+  width: 235px;
+  padding: 10px;
+}
+.why-us-box .icon {
+  text-align: center;
+  margin: 15px;
+}
+.why-us-box .icon .fa {
+  transform: scaleX(-1);
+  font-size: 3.8rem;
+  color: #045737;
+}
+.why-us-box p {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+.services-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.services-button {
+  width: 300px;
+  background-color: #03754F;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 0;
+  margin: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.services-button:hover {
+  color: #E63900;
 }
