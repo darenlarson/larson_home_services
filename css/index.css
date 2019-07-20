@@ -684,4 +684,13 @@ nav {
 }
 .customers-ctn .customers-content .customers-text p {
   line-height: 1.5;
+  margin-bottom: 20px;
+}
+.customers-ctn .customers-content .video-ctn {
+  width: 45%;
+}
+.customers-ctn .customers-content .video-ctn iframe {
+  object-fit: initial;
+  width: 400px;
+  height: 225px;
 }
