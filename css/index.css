@@ -502,7 +502,7 @@ nav {
   font-weight: 700;
 }
 .company-summary-ctn p {
-  margin: 35px 7% 35px 7%;
+  margin: 25px 7% 25px 7%;
   line-height: 1.5;
 }
 .why-us {
@@ -552,6 +552,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .services-button {
   width: 300px;
@@ -566,4 +567,121 @@ nav {
 }
 .services-button:hover {
   color: #E63900;
+}
+.text-content {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.associations {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.associations .association-img-ctn {
+  width: 23%;
+}
+.associations .association-img-ctn img {
+  width: 100%;
+  filter: #555555;
+  -webkit-filter: #555555;
+  filter: grayscale(1);
+}
+.our-service-area {
+  width: 100%;
+  background-color: lightgrey;
+  padding: 50px 0;
+}
+.our-service-area-content {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.our-service-area-content .service-area-info {
+  width: 41%;
+}
+.our-service-area-content .service-area-info h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #555555;
+  margin-bottom: 15px;
+}
+.our-service-area-content .service-area-info h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 10px;
+}
+.our-service-area-content .service-area-info p {
+  color: #03754F;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.our-service-area-content .service-area-info a {
+  color: #03754F;
+  cursor: pointer;
+  text-decoration: none;
+}
+.our-service-area-content .service-area-info a:hover {
+  text-decoration: underline;
+}
+.our-service-area-content .service-area-img-ctn {
+  width: 30%;
+  margin-right: 200px;
+}
+.our-service-area-content .service-area-img-ctn img {
+  width: 100%;
+  border-radius: 50%;
+}
+.customers {
+  width: 100%;
+  background: linear-gradient(rgba(255, 226, 86, 0.35), rgba(254, 245, 192, 0.5));
+}
+.customers-ctn {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.customers-ctn h2 {
+  font-size: 2.8rem;
+  color: #555555;
+  font-weight: 700;
+  text-align: center;
+}
+.customers-ctn .reviews {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 50px;
+}
+.customers-ctn .review {
+  background: #FFFFFF;
+  width: 325px;
+  height: 165px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 25px 0 0 0;
+  box-shadow: 0 0 5px lightgrey;
+}
+.customers-ctn .customers-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.customers-ctn .customers-content .customers-text {
+  width: 50%;
+}
+.customers-ctn .customers-content .customers-text h2 {
+  margin-bottom: 25px;
+}
+.customers-ctn .customers-content .customers-text p {
+  line-height: 1.5;
 }

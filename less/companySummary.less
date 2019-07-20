@@ -21,7 +21,7 @@
     font-weight: 700;
   }
   p {
-    margin: 35px 7% 35px 7%;
+    margin: 25px 7% 25px 7%;
     line-height: 1.5;
   }
 }
@@ -46,7 +46,6 @@
 }
 
 .why-us-boxes {
-  // border: 1px solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,7 +59,6 @@
   width: 235px;
   padding: 10px;
   .icon {
-    // border: 1px solid green;
     text-align: center;
     margin: 15px;
     .fa {
@@ -77,10 +75,10 @@
 }
 
 .services-buttons {
-  // border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .services-button {
@@ -92,9 +90,145 @@
   margin: 5px;
   font-size: 2rem;
   cursor: pointer;
-  transition: color .5s ease;
+  transition: color 0.5s ease;
   &:hover {
-    // background-color: @light-green;
     color: @orange;
+  }
+}
+
+.text-content {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.associations {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .association-img-ctn {
+    width: 23%;
+    img {
+      width: 100%;
+      filter: @grey;
+      -webkit-filter: @grey;
+      filter: grayscale(1);
+    }
+  }
+}
+
+
+// ***** OUR SERVICE AREA *****
+.our-service-area {
+  width: 100%;
+  background-color: lightgrey;
+  padding: 50px 0;
+}
+
+.our-service-area-content {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+  // padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .service-area-info {
+    width: 41%;
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: @grey;
+      margin-bottom: 15px
+    }
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: @grey;
+      margin-bottom: 10px;
+    }
+    p {
+      color: @green;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    a {
+      color: @green;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .service-area-img-ctn {
+    // border: 1px solid red;
+    width: 30%;
+    margin-right: 200px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+      // padding: 25%;
+    }
+  }
+}
+
+
+
+// ***** CUSTOMERS *****
+.customers {
+  width: 100%;
+  background: linear-gradient(rgba(255, 226, 86, 0.35), rgba(254, 245, 192, 0.5))
+}
+
+.customers-ctn {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  h2 {
+    font-size: 2.8rem;
+    color: @grey;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .reviews {
+    // border: 1px solid red;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .review {
+    background: @white;
+    width: 325px;
+    height: 165px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 25px 0 0 0;
+    box-shadow: 0 0 5px lightgrey;
+  }
+
+  .customers-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .customers-text {
+      width: 50%;
+      h2 {
+        margin-bottom: 25px;
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
   }
 }
