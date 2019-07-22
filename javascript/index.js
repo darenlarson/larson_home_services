@@ -7,6 +7,7 @@ window.onscroll = function() {
 const stickyHeader = document.querySelector(".sticky-header");
 const topHeader = document.querySelector(".top-header");
 const navTop = document.querySelector(".top-header nav");
+const topButton = document.querySelector(".scrollToTop");
 
 // Get the offset position of the navbar
 const breakPoint = navTop.offsetTop;
@@ -16,14 +17,22 @@ function myFunction() {
   let y = window.scrollY;
 
   if (window.pageYOffset >= breakPoint) {
+    // Show sticky header
     stickyHeader.classList.add("visible");
     stickyHeader.classList.remove("invisible");
+
+    // Display the "TOP" button
+    topButton.classList.add("show-top-button");
   }
 
   if (y < 90) {
+    // Show top header
     stickyHeader.classList.remove("visible");
     stickyHeader.classList.add("invisible");
     topHeader.classList.remove("hide-top-header");
+
+    // Hide the "TOP" button
+    topButton.classList.remove("show-top-button");
   }
 }
 
@@ -75,6 +84,9 @@ class TabItem {
 // Get the DOM elements
 let links = Array.from(document.querySelectorAll(".nav-link"));
 links = links.map(link => new TabLink(link));
+
+
+
 
 // ***** SLIDER *****
 const track = document.querySelector(".carousel-track");
