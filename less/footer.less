@@ -1,0 +1,110 @@
+// ***** FOOTER *****
+footer {
+  background: @dark-grey;
+  padding: 30px 0;
+  width: 100%;
+  color: @light-grey;
+}
+
+.footer-ctn {
+  // border: 1px solid green;
+  width: 70%;
+  display: flex;
+  // justify-content: space-around;
+  margin: 0 auto;
+
+  .footer-left-side {
+    border-right: 1px solid #212121;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+      background-color: @light-grey;
+      color: @dark-grey;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 2;
+      margin: 20px 0 40px 0;
+      cursor: pointer;
+      transition: background-color .7s ease;
+      &:hover {
+        background-color: @white;
+      }
+    }
+
+    #phone-number {
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    address {
+      margin-bottom: 10px;
+    }
+
+    .img-ctn {
+      margin-top: 20px;
+    }
+  }
+
+  .footer-right-side {
+    border-left: 1px solid #4c4c4c;
+    width: 45%;
+    padding-left: 100px;
+    margin-top: 20px;
+
+    h4 {
+      color: @white;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      width: 150px;
+    }
+
+    li, a {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all .7s ease;
+      text-decoration: none;
+      color: @light-grey;
+      &:hover {
+        color: @white;
+        text-decoration: underline;
+      }
+    }
+
+    .footer-link-columns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .company-work {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+  .social-link {
+    margin-right: 20px;
+    font-size: 2.5rem;
+    transition: all .7s ease;
+    cursor: pointer;
+    &:hover {
+      color: @white;
+    }
+  }
+}
