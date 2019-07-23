@@ -84,6 +84,7 @@ class TabItem {
 // Get the DOM elements
 let links = Array.from(document.querySelectorAll(".nav-link"));
 links = links.map(link => new TabLink(link));
+console.log(links);
 
 
 
