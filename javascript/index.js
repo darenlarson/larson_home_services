@@ -48,6 +48,7 @@ class TabLink {
     );
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.tabItem);
+    console.log(this.tabItem);
 
     // Add event listeners on this instance
     this.link.addEventListener("mouseenter", () => {
@@ -59,6 +60,7 @@ class TabLink {
   }
 
   show() {
+    console.log(this.link)
     this.tabItem.show();
   }
 
