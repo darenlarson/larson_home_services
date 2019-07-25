@@ -1,4 +1,4 @@
-.top-header {
+header {
   z-index: 100;
 }
 
@@ -74,13 +74,17 @@
   }
 }
 
+
+
+
+
 // ***** NAV BAR *****
 nav {
   width: 100%;
   background-color: @green;
   color: @white;
   line-height: 3;
-  box-shadow: 0 5px 10px rgba(0,0,0,.35);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
 }
 
 .nav-items {
@@ -90,29 +94,32 @@ nav {
   margin: 0 auto;
 }
 
+.nav-item {
+  padding: 0 10px;
+  color: @white;
+  transition: color 0.25s ease;
+  &:hover {
+    cursor: pointer;
+    color: @orange;
+  }
+  a {
+    text-decoration: none;
+    color: @white;
+    transition: color 0.25s ease;
+    &:hover {
+      color: @orange;
+    }
+  }
+}
+
+
+
+
 
 // ***** STICKY HEADER *****
 .sticky-header {
   position: fixed;
   background-color: @white;
-}
-  .invisible {
-    margin-top: -50px;
-    top: 0;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-  }
-
-  .visible {
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: margin-top 1s ease;
-    z-index: 1000;
-  }
-
-.sticky-header {
   .top-banner {
     margin-bottom: 0;
     padding-top: 0;
@@ -153,38 +160,27 @@ nav {
       }
     }
   }
-  nav {
-    box-shadow: 0 5px 10px rgba(0,0,0,.35);
+}
 
-    .nav-item {
-      text-decoration: none;
-      // color: red;
-    }
-  }
+.invisible {
+  margin-top: -50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.visible {
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: margin-top 1s ease;
+  z-index: 1000;
 }
 
 
-.nav-items {
-  // border: 1px solid red;
-}
 
-.nav-item {
-  padding: 0 10px;
-  color: @white;
-  transition: color 0.25s ease;
-  &:hover {
-    cursor: pointer;
-    color: @orange;
-  }
-  a {
-    text-decoration: none;
-    color: @white;
-    transition: color 0.25s ease;
-    &:hover {
-      color: @orange;
-    }
-  }
-}
+
 
 // ***** NAV DROPDOWN MENU ******
 .dropdown-content {
@@ -195,69 +191,7 @@ nav {
   opacity: 0.9;
   color: @black;
   line-height: normal;
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
-  &:hover {
-    cursor: auto;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      text-decoration: underline;
-      color: @green;
-    }
-  }
-  h4 {
-    margin-bottom: 5px;
-    font-size: 1.7rem;
-    font-weight: 700;
-  }
-}
-
-.services {
-  height: 400px;
-  width: 900px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 25px 50px;
-
-  .category {
-    margin-bottom: 20px;
-  }
-
-  ul li {
-    position: relative;
-    padding-bottom: 10px;
-    font-size: 1.5rem;
-  }
-
-  ul {
-    list-style: none;
-    margin-left: 25px;
-  }
-
-  ul li:before {
-    content: "";
-    position: absolute;
-    border-right: 2px solid @orange;
-    border-bottom: 2px solid @orange;
-    width: 5px;
-    height: 5px;
-    top: calc(50% - 4px);
-    left: -20px;
-    transform: translateY(-50%) rotate(-45deg);
-  }
-}
-
-.dropdown-content {
-  position: absolute;
-  z-index: 999;
-  display: none;
-  background-color: @white;
-  opacity: 0.9;
-  color: @black;
-  line-height: normal;
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   &:hover {
     cursor: auto;
   }
@@ -325,24 +259,27 @@ nav {
 }
 
 
+
+
+
 // ***** SCROLL TO TOP *****
 .scrollToTop {
   position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 1000;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   border-radius: 5px;
   padding: 10px 15px;
   color: @white;
   font-size: 2rem;
   text-decoration: none;
-  transition: background .7s ease;
+  transition: background 0.7s ease;
   cursor: inherit;
 }
 
 .show-top-button {
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, 0.25);
   z-index: 1000;
   cursor: pointer;
 }
