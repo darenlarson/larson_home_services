@@ -8,7 +8,6 @@
 .carousel-image {
   height: 100%;
   width: 100%;
-  // object-fit: cover;
 }
 
 .carousel-track-container {
@@ -26,16 +25,13 @@
   transition: transform 1500ms ease-in-out;
 }
 
-// ***** CAROUSEL SLIDES
+// ***** CAROUSEL SLIDES *****
 .carousel-slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   color: @white;
   .slide-content {
     width: 100%;
@@ -131,7 +127,7 @@
   margin: 0 auto;
   margin-top: 100px;
   max-width: 1000px;
-  width: 70%;
+  width: 90%;
 }
 
 .company-summary-ctn {
@@ -140,6 +136,11 @@
     line-height: 62px;
     text-align: center;
     color: @green;
+    @media @small-desktop {
+      font-size: 3.4rem;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
   }
   h2 {
     font-size: 2.8rem;
@@ -147,6 +148,9 @@
     text-align: center;
     color: @black;
     font-weight: 700;
+    @media @small-desktop {
+      font-size: 2.2rem;
+    }
   }
   p {
     margin: 25px 7% 25px 7%;
@@ -159,7 +163,7 @@
   margin: 0 auto;
   margin-top: 100px;
   max-width: 1000px;
-  width: 80%;
+  width: 90%;
 }
 
 .why-us-ctn {
@@ -177,7 +181,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  @media @small-desktop {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+  }
 }
 
 .why-us-box {
@@ -186,6 +196,9 @@
   box-shadow: 0 0 5px lightgrey;
   width: 235px;
   padding: 10px;
+  @media @small-desktop {
+    margin: 5px;
+  }
   .icon {
     text-align: center;
     margin: 15px;
@@ -222,6 +235,9 @@
   &:hover {
     color: @orange;
   }
+  @media @small-desktop {
+    width: 250px;
+  }
 }
 
 .text-content {
@@ -256,14 +272,20 @@
 
 .our-service-area-content {
   max-width: 1000px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  // padding: 0 30px;
   display: flex;
   justify-content: space-between;
+  @media @small-desktop {
+    flex-direction: column;
+  }
 
   .service-area-info {
     width: 41%;
+    @media @small-desktop {
+      width: 100%;
+      margin-bottom: 40px;
+    }
     h2 {
       font-size: 2.8rem;
       font-weight: 700;
@@ -282,6 +304,9 @@
       font-weight: 400;
       line-height: 1.5;
       margin-bottom: 15px;
+      @media @small-desktop {
+        line-height: 2;
+      }
     }
     a {
       color: @green;
@@ -294,13 +319,15 @@
   }
 
   .service-area-img-ctn {
-    // border: 1px solid red;
     width: 30%;
     margin-right: 200px;
+    @media @small-desktop {
+      margin: 0 auto;
+      width: 50%;
+    }
     img {
       width: 100%;
       border-radius: 50%;
-      // padding: 25%;
     }
   }
 }

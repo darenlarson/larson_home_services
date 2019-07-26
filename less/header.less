@@ -2,6 +2,7 @@ header {
   z-index: 100;
 }
 
+// HIDES TOP HEADER WHEN SCROLLING
 .hide-top-header {
   display: none;
 }
@@ -76,21 +77,16 @@ header {
           font-weight: 700;
           border: none;
           border-radius: 20px;
-          transition: box-shadow .5s ease-in;
+          transition: box-shadow 0.5s ease-in;
           &:hover {
             cursor: pointer;
             box-shadow: 5px 2px 5px lightgrey;
-            // color: @green;
           }
         }
       }
     }
   }
 }
-
-
-
-
 
 // ***** NAV BAR *****
 nav {
@@ -104,7 +100,8 @@ nav {
 .nav-items {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -116,6 +113,16 @@ nav {
     cursor: pointer;
     color: @orange;
   }
+  @media @small-desktop {
+    font-size: 1.4rem;
+  }
+
+  div {
+    @media @small-desktop {
+      font-size: 1.4rem;
+    }
+  }
+
   a {
     text-decoration: none;
     color: @white;
@@ -125,10 +132,6 @@ nav {
     }
   }
 }
-
-
-
-
 
 // ***** STICKY HEADER *****
 .sticky-header {
@@ -176,6 +179,7 @@ nav {
   }
 }
 
+// DYNAMICALLY SHOWS/HIDES THE STICKY HEADER DEPENDING ON SCROLL POSITION
 .invisible {
   margin-top: -50px;
   top: 0;
@@ -191,10 +195,6 @@ nav {
   transition: margin-top 1s ease;
   z-index: 1000;
 }
-
-
-
-
 
 // ***** NAV DROPDOWN MENU ******
 .dropdown-content {
@@ -226,10 +226,14 @@ nav {
 
 .services {
   height: 400px;
-  width: 900px;
+  max-width: 900px;
+  width: 95%;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 25px 50px;
+  @media @small-desktop {
+    height: 600px;
+  }
 
   .category {
     margin-bottom: 20px;
@@ -271,10 +275,6 @@ nav {
 .dropdown-visible {
   display: flex;
 }
-
-
-
-
 
 // ***** SCROLL TO TOP *****
 .scrollToTop {
