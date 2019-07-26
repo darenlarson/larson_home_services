@@ -181,6 +181,12 @@ header {
   margin-bottom: 20px;
   padding-top: 20px;
 }
+@media (max-width: 1024px) {
+  .top-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .top-banner .img-ctn {
   width: 400px;
   display: flex;
@@ -210,10 +216,20 @@ header {
   font-weight: 700;
   font-size: 1.4rem;
 }
+@media (max-width: 1024px) {
+  .top-banner .right-banner .contact p {
+    display: none;
+  }
+}
 .top-banner .right-banner .contact div {
   width: 45%;
   color: #E63900;
   font-weight: 800;
+}
+@media (max-width: 1024px) {
+  .top-banner .right-banner .contact div {
+    margin: 0 auto;
+  }
 }
 .top-banner .right-banner .contact div h3 {
   font-size: 3rem;
@@ -228,9 +244,11 @@ header {
   font-weight: 700;
   border: none;
   border-radius: 20px;
+  transition: box-shadow 0.5s ease-in;
 }
 .top-banner .right-banner .contact div button:hover {
   cursor: pointer;
+  box-shadow: 5px 2px 5px lightgrey;
 }
 nav {
   width: 100%;
