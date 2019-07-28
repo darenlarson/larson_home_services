@@ -193,6 +193,11 @@ header {
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 650px) {
+  .top-banner .img-ctn {
+    width: 94%;
+  }
+}
 .top-banner .img-ctn img {
   width: 100%;
   vertical-align: middle;
@@ -918,7 +923,8 @@ footer {
   color: #B0B0B0;
 }
 .footer-ctn {
-  width: 90%;
+  max-width: 1200px;
+  width: 95%;
   display: flex;
   margin: 0 auto;
 }
@@ -930,7 +936,7 @@ footer {
 }
 .footer-ctn .footer-left-side {
   border-right: 1px solid #212121;
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -954,7 +960,7 @@ footer {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 2;
-  margin: 20px 0 40px 0;
+  margin-bottom: 40px;
   cursor: pointer;
   transition: background-color 0.7s ease;
 }
@@ -974,8 +980,9 @@ footer {
 }
 .footer-ctn .footer-right-side {
   border-left: 1px solid #4c4c4c;
-  width: 55%;
-  padding-left: 100px;
+  width: 60%;
+  padding-left: 50px;
+  margin: 0 auto;
   margin-top: 20px;
 }
 @media (max-width: 1024px) {
@@ -983,23 +990,24 @@ footer {
     border-left: none;
     border-bottom: 1px solid #4c4c4c;
     width: 100%;
-    padding-left: 200px;
+    padding: 0 100px;
   }
 }
 @media (max-width: 800px) {
   .footer-ctn .footer-right-side {
-    padding-left: 35px;
+    padding: 0 5%;
   }
+}
+.footer-ctn .footer-right-side .footer-nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer-ctn .footer-right-side h4 {
   color: #FFFFFF;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 15px;
-}
-.footer-ctn .footer-right-side ul {
-  width: 150px;
-  margin-right: 75px;
 }
 .footer-ctn .footer-right-side li,
 .footer-ctn .footer-right-side a {
@@ -1014,23 +1022,6 @@ footer {
 .footer-ctn .footer-right-side a:hover {
   color: #FFFFFF;
   text-decoration: underline;
-}
-.footer-ctn .footer-right-side .footer-link-columns {
-  display: flex;
-  margin-bottom: 30px;
-}
-@media (max-width: 1024px) {
-  .footer-ctn .footer-right-side .footer-link-columns {
-    justify-content: flex-start;
-  }
-}
-.footer-ctn .footer-right-side .company-work {
-  display: flex;
-}
-@media (max-width: 1024px) {
-  .footer-ctn .footer-right-side .company-work {
-    justify-content: flex-start;
-  }
 }
 .footer-ctn .social-links {
   margin-top: 10px;
