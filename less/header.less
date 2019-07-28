@@ -1,5 +1,5 @@
 header {
-  z-index: 100;
+  z-index: 1000;
 }
 
 // HIDES TOP HEADER WHEN SCROLLING
@@ -36,11 +36,18 @@ header {
   .right-banner {
     width: 550px;
     text-align: end;
+    @media @small-desktop {
+      width: auto;
+      text-align: center;
+    }
 
     .serving-areas {
       font-style: italic;
       color: @grey;
       margin-bottom: 10px;
+      @media @tablet {
+        margin-bottom: 20px;
+      }
     }
 
     .contact {
@@ -61,11 +68,12 @@ header {
         color: @orange;
         font-weight: 800;
         @media @small-desktop {
-          margin: 0 auto;
+          width: 100%;
         }
 
         h3 {
           font-size: 3rem;
+          margin: 0 auto;
           margin-bottom: 10px;
         }
         button {
@@ -116,13 +124,11 @@ nav {
   @media @small-desktop {
     font-size: 1.4rem;
   }
-
   div {
     @media @small-desktop {
       font-size: 1.4rem;
     }
   }
-
   a {
     text-decoration: none;
     color: @white;
@@ -194,6 +200,9 @@ nav {
   right: 0;
   transition: margin-top 1s ease;
   z-index: 1000;
+  @media @tablet {
+    display: none;
+  }
 }
 
 // ***** NAV DROPDOWN MENU ******
@@ -274,6 +283,56 @@ nav {
 
 .dropdown-visible {
   display: flex;
+}
+
+// ***** MOBILE NAV*****
+// HIDES THE DESKTOP NAVBAR IN MOBILE SIZE
+.stick-header,
+.top-header nav {
+  @media @tablet {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  text-align: end;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  button {
+    margin-right: 20px;
+    background: none;
+    border: none;
+    color: @white;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    &:hover {
+      color: @orange;
+    }
+  }
+}
+.mobile-dropdown {
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  background: @green;
+  width: 100%;
+  a {
+    width: 90%;
+    margin: 0 auto;
+    text-align: start;
+    text-decoration: none;
+    color: @white;
+    border-bottom: 1px solid #026949;
+    cursor: pointer;
+  }
+}
+
+.mobile-dropdown-visible {
+  display: flex;
+  z-index: 2000;
 }
 
 // ***** SCROLL TO TOP *****

@@ -167,7 +167,7 @@ button:focus {
   outline: none;
 }
 header {
-  z-index: 100;
+  z-index: 1000;
 }
 .hide-top-header {
   display: none;
@@ -202,10 +202,21 @@ header {
   width: 550px;
   text-align: end;
 }
+@media (max-width: 1024px) {
+  .top-banner .right-banner {
+    width: auto;
+    text-align: center;
+  }
+}
 .top-banner .right-banner .serving-areas {
   font-style: italic;
   color: #555555;
   margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .top-banner .right-banner .serving-areas {
+    margin-bottom: 20px;
+  }
 }
 .top-banner .right-banner .contact {
   display: flex;
@@ -228,11 +239,12 @@ header {
 }
 @media (max-width: 1024px) {
   .top-banner .right-banner .contact div {
-    margin: 0 auto;
+    width: 100%;
   }
 }
 .top-banner .right-banner .contact div h3 {
   font-size: 3rem;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 .top-banner .right-banner .contact div button {
@@ -343,6 +355,11 @@ nav {
   transition: margin-top 1s ease;
   z-index: 1000;
 }
+@media (max-width: 800px) {
+  .visible {
+    display: none;
+  }
+}
 .dropdown-content {
   position: absolute;
   z-index: 999;
@@ -415,6 +432,51 @@ nav {
 }
 .dropdown-visible {
   display: flex;
+}
+@media (max-width: 800px) {
+  .stick-header,
+  .top-header nav {
+    display: none;
+  }
+}
+.mobile-nav {
+  text-align: end;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+.mobile-nav button {
+  margin-right: 20px;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.mobile-nav button:hover {
+  color: #E63900;
+}
+.mobile-dropdown {
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  background: #03754F;
+  width: 100%;
+}
+.mobile-dropdown a {
+  width: 90%;
+  margin: 0 auto;
+  text-align: start;
+  text-decoration: none;
+  color: #FFFFFF;
+  border-bottom: 1px solid #026949;
+  cursor: pointer;
+}
+.mobile-dropdown-visible {
+  display: flex;
+  z-index: 2000;
 }
 .scrollToTop {
   position: fixed;
@@ -916,6 +978,11 @@ footer {
     border-bottom: 1px solid #4c4c4c;
     width: 100%;
     padding-left: 200px;
+  }
+}
+@media (max-width: 800px) {
+  .footer-ctn .footer-right-side {
+    padding-left: 35px;
   }
 }
 .footer-ctn .footer-right-side h4 {

@@ -91,6 +91,20 @@ console.log(links);
 
 
 
+// ***** MOBILE DROPDOWN MENU *****
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+const menuButton = document.querySelector(".mobile-nav button")
+console.log(mobileDropdown);
+console.log(menuButton);
+
+menuButton.addEventListener("click", () => {
+  mobileDropdown.classList.toggle("mobile-dropdown-visible");
+})
+
+
+
+
+
 // ***** SLIDER *****
 const track = document.querySelector(".carousel-track");
 const slides = Array.from(track.children);
