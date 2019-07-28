@@ -440,23 +440,29 @@ nav {
   }
 }
 .mobile-nav {
-  text-align: end;
-  position: sticky;
-  top: 0;
-  z-index: 2000;
+  display: none;
 }
-.mobile-nav button {
-  margin-right: 20px;
-  background: none;
-  border: none;
-  color: #FFFFFF;
-  font-size: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.5s ease;
-}
-.mobile-nav button:hover {
-  color: #E63900;
+@media (max-width: 800px) {
+  .mobile-nav {
+    display: block;
+    text-align: end;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+  }
+  .mobile-nav button {
+    margin-right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+  .mobile-nav button:hover {
+    color: #E63900;
+  }
 }
 .mobile-dropdown {
   flex-direction: column;

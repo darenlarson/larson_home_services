@@ -295,21 +295,25 @@ nav {
 }
 
 .mobile-nav {
-  text-align: end;
-  position: sticky;
-  top: 0;
-  z-index: 2000;
-  button {
-    margin-right: 20px;
-    background: none;
-    border: none;
-    color: @white;
-    font-size: 2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.5s ease;
-    &:hover {
-      color: @orange;
+  display: none;
+  @media @tablet {
+    display: block;
+    text-align: end;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    button {
+      margin-right: 20px;
+      background: none;
+      border: none;
+      color: @white;
+      font-size: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.5s ease;
+      &:hover {
+        color: @orange;
+      }
     }
   }
 }
