@@ -451,7 +451,7 @@ nav {
   .mobile-nav {
     display: block;
     text-align: end;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2000;
   }
@@ -464,9 +464,6 @@ nav {
     font-weight: 600;
     cursor: pointer;
     transition: color 0.5s ease;
-  }
-  .mobile-nav button:hover {
-    color: #E63900;
   }
 }
 .mobile-dropdown {

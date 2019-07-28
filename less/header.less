@@ -302,7 +302,7 @@ nav {
   @media @tablet {
     display: block;
     text-align: end;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2000;
     button {
@@ -314,9 +314,6 @@ nav {
       font-weight: 600;
       cursor: pointer;
       transition: color 0.5s ease;
-      &:hover {
-        color: @orange;
-      }
     }
   }
 }
