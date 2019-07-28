@@ -988,7 +988,7 @@ footer {
 @media (max-width: 650px) {
   .footer-ctn .footer-left-side button {
     font-size: 2.1rem;
-    width: 225px;
+    width: 80%;
   }
 }
 .footer-ctn .footer-left-side #phone-number {
