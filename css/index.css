@@ -511,6 +511,11 @@ nav {
   height: 365px;
   width: 100%;
 }
+@media (max-width: 650px) {
+  .carousel {
+    height: 250px;
+  }
+}
 .carousel-image {
   height: 100%;
   width: 100%;
@@ -545,10 +550,20 @@ nav {
   align-items: center;
   padding: 100px 50px 0 50px;
 }
+@media (max-width: 650px) {
+  .carousel-slide .slide-content {
+    padding: 40px 20px 0 20px;
+  }
+}
 .carousel-slide .slide-content h3 {
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
+}
+@media (max-width: 650px) {
+  .carousel-slide .slide-content h3 {
+    font-size: 3rem;
+  }
 }
 .carousel-slide .slide-content h4 {
   color: #fbec74;
@@ -556,6 +571,11 @@ nav {
   font-size: 3.5rem;
   font-weight: 400;
   margin-top: 30px;
+}
+@media (max-width: 650px) {
+  .carousel-slide .slide-content h4 {
+    font-size: 2.2rem;
+  }
 }
 #slide1 {
   background-image: url(https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/1347/mm-gutter2-LEAFGUARD-DEALER-IMG.jpg);
@@ -964,6 +984,12 @@ footer {
 }
 .footer-ctn .footer-left-side button:hover {
   background-color: #FFFFFF;
+}
+@media (max-width: 650px) {
+  .footer-ctn .footer-left-side button {
+    font-size: 2.1rem;
+    width: 225px;
+  }
 }
 .footer-ctn .footer-left-side #phone-number {
   font-size: 3.2rem;
