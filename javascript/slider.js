@@ -186,4 +186,4 @@ function autoShift() {
   });
 }
 
-var shiftTimer = setInterval(autoShift, 5000);
+// var shiftTimer = setInterval(autoShift, 5000);
