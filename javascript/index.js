@@ -154,9 +154,10 @@ nextButton.addEventListener("click", e => {
     targetSlide = currentSlide.previousElementSibling;
     targetDot = currentDot.previousElementSibling;
   }
-
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
+  clearInterval(shiftTimer);
+  shiftTimer = setInterval(autoShift, 5000);
 });
 
 // When I click the left button, move slides to the left
@@ -177,6 +178,8 @@ prevButton.addEventListener("click", e => {
 
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
+  clearInterval(shiftTimer);
+  shiftTimer = setInterval(autoShift, 5000);
 });
 
 // When I click the nav indicators, move to that slide
@@ -193,6 +196,8 @@ dotsNav.addEventListener("click", e => {
 
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
+  clearInterval(shiftTimer);
+  shiftTimer = setInterval(autoShift, 5000);
 });
 
 
@@ -249,6 +254,8 @@ function touchSlider(xStart, xEnd) {
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
   }
+  clearInterval(shiftTimer);
+  shiftTimer = setInterval(autoShift, 5000);
 }
 
 
@@ -275,4 +282,4 @@ function autoShift() {
   });
 }
 
-setInterval(autoShift, 5000);
+var shiftTimer = setInterval(autoShift, 5000);

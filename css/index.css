@@ -604,6 +604,11 @@ nav {
   background: none;
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .carousel-button {
+    display: none;
+  }
+}
 .left-button {
   left: 0;
   transform: translateY(-50%) rotate(135deg);
