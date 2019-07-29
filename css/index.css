@@ -1054,6 +1054,7 @@ footer {
   text-decoration: underline;
 }
 .footer-ctn .social-links {
+  display: flex;
   margin-top: 10px;
 }
 @media (max-width: 1024px) {
