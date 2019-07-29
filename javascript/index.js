@@ -48,7 +48,6 @@ class TabLink {
     );
     // Using the Item element, create a new instance of the TabItem class
     this.tabItem = new TabItem(this.tabItem);
-    console.log(this.tabItem);
 
     // Add event listeners on this instance
     this.link.addEventListener("mouseenter", () => {
@@ -60,7 +59,7 @@ class TabLink {
   }
 
   show() {
-    console.log(this.link)
+    console.log(this.link);
     this.tabItem.show();
   }
 
@@ -86,24 +85,14 @@ class TabItem {
 // Get the DOM elements
 let links = Array.from(document.querySelectorAll(".nav-link"));
 links = links.map(link => new TabLink(link));
-console.log(links);
-
-
-
 
 // ***** MOBILE DROPDOWN MENU *****
 const mobileDropdown = document.querySelector(".mobile-dropdown");
-const menuButton = document.querySelector(".mobile-nav button")
-console.log(mobileDropdown);
-console.log(menuButton);
+const menuButton = document.querySelector(".mobile-nav button");
 
 menuButton.addEventListener("click", () => {
   mobileDropdown.classList.toggle("mobile-dropdown-visible");
-})
-
-
-
-
+});
 
 // ***** SLIDER *****
 const track = document.querySelector(".carousel-track");
@@ -148,6 +137,7 @@ const updateDots = (currentDot, targetDot) => {
   currentDot.classList.remove("current-slide-indicator");
   targetDot.classList.add("current-slide-indicator");
 };
+
 
 // When I click the right button, move slides to the right
 nextButton.addEventListener("click", e => {
@@ -204,6 +194,64 @@ dotsNav.addEventListener("click", e => {
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
 });
+
+
+// ***** TOUCH SLIDING *****
+let xStart;
+let xEnd;
+
+slides.forEach(slide => {
+  slide.addEventListener("touchstart", e => {
+    xStart = e.touches["0"].screenX;
+  });
+
+  slide.addEventListener("touchend", e => {
+    xEnd = e.changedTouches["0"].screenX;
+
+    touchSlider(xStart, xEnd);
+  });
+});
+
+function touchSlider(xStart, xEnd) {
+  if (xStart - xEnd > 0) {
+    console.log("move to right");
+    const currentSlide = track.querySelector(".current-slide");
+    let targetSlide;
+    const currentDot = dotsNav.querySelector(".current-slide-indicator");
+    let targetDot;
+
+    if (currentSlide.nextElementSibling) {
+      targetSlide = currentSlide.nextElementSibling;
+      targetDot = currentDot.nextElementSibling;
+    } else {
+      targetSlide = currentSlide.previousElementSibling;
+      targetDot = currentDot.previousElementSibling;
+    }
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+  } else {
+    console.log("move to left");
+    const currentSlide = track.querySelector(".current-slide");
+    let targetSlide = currentSlide.previousElementSibling;
+
+    const currentDot = dotsNav.querySelector(".current-slide-indicator");
+    let targetDot;
+
+    if (currentSlide.previousElementSibling) {
+      targetSlide = currentSlide.previousElementSibling;
+      targetDot = currentDot.previousElementSibling;
+    } else {
+      targetSlide = currentSlide.nextElementSibling;
+      targetDot = currentDot.nextElementSibling;
+    }
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+  }
+}
+
+
 
 function autoShift() {
   const currentSlide = track.querySelector(".current-slide");
