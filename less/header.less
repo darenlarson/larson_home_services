@@ -82,16 +82,18 @@ header {
         button {
           padding: 3px 20px;
           line-height: 1.7;
-          background-color: @orange;
-          color: @white;
+          // background-color: @orange;
+          // color: @white;
+          color: @orange;
           font-size: 1.8rem;
           font-weight: 700;
-          border: none;
+          // border: none;
+          border: 1px solid @orange;
           border-radius: 20px;
           transition: box-shadow 0.5s ease-in;
           &:hover {
             cursor: pointer;
-            box-shadow: 5px 2px 5px lightgrey;
+            box-shadow: 5px 2px 5px @orange;
           }
         }
       }
