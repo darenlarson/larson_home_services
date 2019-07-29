@@ -255,16 +255,17 @@ header {
 .top-banner .right-banner .contact div button {
   padding: 3px 20px;
   line-height: 1.7;
-  color: #E63900;
+  background-color: #03754F;
+  color: #FFFFFF;
   font-size: 1.8rem;
   font-weight: 700;
-  border: 1px solid #E63900;
+  border: 1px solid #03754F;
   border-radius: 20px;
   transition: box-shadow 0.5s ease-in;
 }
 .top-banner .right-banner .contact div button:hover {
   cursor: pointer;
-  box-shadow: 5px 2px 5px #E63900;
+  box-shadow: 5px 2px 5px #03754F;
 }
 nav {
   width: 100%;
